@@ -24,6 +24,8 @@ import List from '@ckeditor/ckeditor5-list/src/list';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import Clipboard from '@ckeditor/ckeditor5-clipboard/src/clipboard';
 import Font from '@ckeditor/ckeditor5-font/src/font';
+import Table from '@ckeditor/ckeditor5-table/src/table';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -46,7 +48,9 @@ ClassicEditor.builtinPlugins = [
 	List,
 	Paragraph,
 	Clipboard,
-	Font
+	Font,
+	Table,
+	Alignment
 ];
 
 // Editor configuration.
@@ -65,7 +69,12 @@ ClassicEditor.defaultConfig = {
 			'undo',
 			'redo',
 			'fontFamily',
-			'fontSize'
+			'fontSize',
+			'alignment',
+			'insertTable',
+			'tableColumn',
+			'tableRow',
+			'mergeTableCells'
 		]
 	},
 	image: {
